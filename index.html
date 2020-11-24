@@ -1,6 +1,7 @@
 
 
 
+
 <!DOCTYPE html>
 <html>
 <style>
@@ -23,6 +24,8 @@
 }
 </style>
 <body>
+
+
 <div style="z-index:9999; position: fixed; top:0;bottom:0;left:0;right:0;"> 
 <div id="mydiv">
 
@@ -88,9 +91,23 @@ body {
 <button onclick="window.open('data:text/html;raw,<p>welp... looks like we arent finished yet!</p>','popUpWindow','height=500,width=400,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');">About</button> 
 <button onclick="window.open('https://cseriestechhero.github.io/about.lctapps_1994-STUDIOS/','popUpWindow','height=500,width=400,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');">LCTapps about</button> 
  <button onclick="window.open('https://cseriestechhero.github.io/about.lctapps_1994-STUDIOS/contact-LCTapps','popUpWindow','height=500,width=400,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');">Contact LCTapps</button> 
- <button onclick="window.open('data:text/html;raw,<p>welp... looks like we arent finished yet!</p>','popUpWindow','height=500,width=400,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');">Changelog</button> 
-<button onclick="window.open('data:text/html;raw,<p>welp... looks like we arent finished yet!</p>','popUpWindow','height=500,width=400,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');">what is this button?</button>     
+ <button onclick="window.open('data:text/html;raw,<p>welp... looks like we arent finished yet!</p>','popUpWindow','height=500,width=400,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');">Changelog</button> <br>
+<button onclick="typeWriter()" id="demo">what is this button? </button>
 
+
+<script>
+var i = 0;
+var txt = 'oh so you wanna know what this button does? well... i dont feel like telling you so ahahahahahaha. hahahahahahahahaha. ok, so you do want to know what this button does?. it just spews out nonsense. if i were you, i would reload the page and not click this button... or you know.... maybe click the open dtbimgb button idk but its your choice. ok now i am going to spew out nonsense... look like i reached the end of my rant! expect more...';
+var speed = 70;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+</script>
 
 
     <script src="button.js"></script>
